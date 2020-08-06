@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import api from './services/api'
+import Routes from './route'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Header from './components/Header'
+import Main from './pages/main'
+
+import './styles.css'
+
+const App = () => (
+  <Routes>
+  <div className="App">
+    <Header />
+    <Main />
+  </div>
+  </Routes>
+)
 
 export default App;
